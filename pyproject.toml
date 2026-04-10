@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "cpis-2015"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "rasterio",
+    "geopandas",
+    "shapely",
+    "fiona",
+    "torch>=2.0",
+    "torchvision",
+    "scikit-image",
+    "pycocotools",
+    "pyyaml",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+instseg = [
+    "mmcv>=2.0",
+    "mmdet>=3.0",
+    "mmengine",
+]
+semseg = [
+    "segmentation-models-pytorch",
+]
+dev = [
+    "pytest",
+    "ruff",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

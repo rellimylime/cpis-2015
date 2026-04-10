@@ -1,0 +1,27 @@
+# Data (downloaded via setup script)
+data/anchors/
+data/regions/
+data/imagery/
+data/gold/
+
+# Runtime artifacts
+runs/
+*.log
+*.err
+
+# Model weights (use external storage)
+*.pth
+*.rar
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Editor / assistant state
+.claude/
+.codex/
+.vscode/
+INFO

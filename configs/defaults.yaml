@@ -1,0 +1,26 @@
+project:
+  name: global_cpis_landsat_ssa
+  gee_project_id: africa-irrigation-mine
+  output_crs: EPSG:4326
+
+region:
+  arid_shp: SSA_Arid_by_Country-shp/SSA_Arid_by_Country.shp
+  region_geojson: assets/regions/arid_ssa.geojson
+  region_summary_json: assets/regions/arid_ssa_summary.json
+
+export:
+  tile_size_km: 200
+  cloud_max: 40
+  max_retries: 3
+  drive_folder: CPIS_LANDSAT_EXPORTS
+
+features:
+  min_radius_m: 150
+  max_radius_m: 2500
+  nms_iou: 0.35
+  max_candidates_per_tile: 300
+
+inference:
+  threshold: 0.5
+  operating_point: precision_first
+  threshold_mode: precision-first
