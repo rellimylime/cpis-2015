@@ -1,0 +1,30 @@
+{
+  "truth_2000": "/home/ermiller/global_cpis_codes/Africa_CPIS-shp/Africa_CPIS_2000.shp",
+  "truth_2021": "/home/ermiller/global_cpis_codes/Africa_CPIS-shp/Africa_CPIS_2021.shp",
+  "equal_area_crs": "EPSG:6933",
+  "stable_iou_min": 0.2,
+  "pivot_buffer_m": 1000.0,
+  "change_buffer_m": 1500.0,
+  "background_cell_km": 100.0,
+  "aoi_mode": "combined_envelope",
+  "aoi_path": "",
+  "counts": {
+    "anchor_2000": 8584,
+    "anchor_2021": 29154,
+    "stable_pivots": 5612,
+    "change_zones": 2954,
+    "stable_background_cells": 5465,
+    "stable_background_points": 5465,
+    "unmatched_2000": 2972,
+    "unmatched_2021": 23542
+  },
+  "outputs": {
+    "anchor_2000": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/anchors/anchor_2000_normalized.gpkg",
+    "anchor_2021": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/anchors/anchor_2021_normalized.gpkg",
+    "stable_pivots": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/stable_pivots.gpkg",
+    "change_zones": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/change_zones.gpkg",
+    "stable_background_cells": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/stable_background_cells.gpkg",
+    "stable_background_points": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/stable_background_points.gpkg",
+    "study_area": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/study_area.gpkg"
+  }
+}
