@@ -21,10 +21,12 @@ class ConvBlock(nn.Module):
 
 
 class UNet(nn.Module):
-    """Lightweight U-Net for 4-band Landsat input, binary mask output.
+    """Lightweight U-Net for multi-band Landsat input, binary mask output.
 
-    Architecture sized for 30m resolution where pivots are 7-20px across.
-    Encoder depths kept shallow to avoid losing small targets.
+    in_channels is configurable (e.g. 4 for B/G/R/NIR median; 11 for stats_v1
+    with NDVI percentiles + NDWI + SWIR). Architecture sized for 30m resolution
+    where pivots are 7-20px across; encoder depths kept shallow to avoid losing
+    small targets.
     """
 
     def __init__(self, in_channels=4, base_filters=32):
