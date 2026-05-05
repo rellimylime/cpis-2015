@@ -339,9 +339,18 @@ def run_export_year(args: argparse.Namespace) -> int:
             counts = tile_status_counts(manifest["tiles"])
             log(f"Status refresh complete. counts={counts}")
 
+        tile_id_filter: set[str] | None = None
+        if args.tile_id_list:
+            with open(args.tile_id_list) as f:
+                raw = [line.strip() for line in f if line.strip()]
+            tile_id_filter = {_local_tile_key(name) or name for name in raw}
+            log(f"Loaded tile_id filter: {len(tile_id_filter)} ids from {args.tile_id_list}")
+
         if args.start_tasks:
             started = 0
             for tile_id, row in manifest["tiles"].items():
+                if tile_id_filter is not None and tile_id not in tile_id_filter:
+                    continue
                 if int(args.max_start_tasks) > 0 and started >= int(args.max_start_tasks):
                     log(f"Reached max_start_tasks={int(args.max_start_tasks)}; stopping task submission")
                     break
@@ -429,6 +438,11 @@ def build_parser(subparsers) -> None:
     p.add_argument("--refresh-status", action="store_true", help="Refresh statuses from GEE task API")
     p.add_argument("--max-retries", type=int, default=3, help="Max retries for failed tiles")
     p.add_argument("--max-tiles", type=int, default=0, help="Limit number of generated tiles (smoke runs)")
+    p.add_argument(
+        "--tile-id-list",
+        default="",
+        help="Optional path to a text file of tile IDs (one per line, e.g. 'tile_000003' or 'cpis_landsat_2021_tile_000003'). When set, only tiles in this list are submitted to GEE.",
+    )
     p.add_argument("--stale-lock-seconds", type=int, default=7200, help="Lock recovery timeout")
     p.add_argument("--force-lock", action="store_true", help="Force lock takeover")
     p.add_argument("--log-file", default="", help="Optional log file")
