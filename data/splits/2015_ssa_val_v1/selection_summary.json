@@ -1,0 +1,60 @@
+{
+  "imagery_dir": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/pilot_2015_ssa/raw",
+  "stable_pivots": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/stable_pivots.gpkg",
+  "change_zones": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/change_zones.gpkg",
+  "out_root": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2015_ssa_val_v1",
+  "raw_tile_count": 203,
+  "positive_tile_count": 53,
+  "target_val_tiles": 13,
+  "selected_val_tiles": 13,
+  "val_fraction": 0.25,
+  "min_val_tiles": 8,
+  "max_val_tiles": 0,
+  "min_centroid_distance_km": 250.0,
+  "lon_bins": 4,
+  "lat_bins": 3,
+  "score_formula": {
+    "stable_count_log1p_norm": 0.45,
+    "change_count_log1p_norm": 0.35,
+    "boundary_touch_count_log1p_norm": 0.2
+  },
+  "selected_tiles": [
+    "cpis_landsat_2015_tile_000006",
+    "cpis_landsat_2015_tile_000010",
+    "cpis_landsat_2015_tile_000015",
+    "cpis_landsat_2015_tile_000022",
+    "cpis_landsat_2015_tile_000026",
+    "cpis_landsat_2015_tile_000033",
+    "cpis_landsat_2015_tile_000045",
+    "cpis_landsat_2015_tile_000069",
+    "cpis_landsat_2015_tile_000091",
+    "cpis_landsat_2015_tile_000101",
+    "cpis_landsat_2015_tile_000104",
+    "cpis_landsat_2015_tile_000106",
+    "cpis_landsat_2015_tile_000120"
+  ],
+  "selected_tier_counts": {
+    "high": 6,
+    "medium": 5,
+    "low": 2
+  },
+  "selected_region_counts": {
+    "lat1_lon1": 1,
+    "lat1_lon2": 1,
+    "lat0_lon0": 1,
+    "lat1_lon3": 1,
+    "lat0_lon1": 1,
+    "lat2_lon3": 1,
+    "lat2_lon2": 2,
+    "lat1_lon0": 1,
+    "lat0_lon2": 1,
+    "lat2_lon0": 2,
+    "lat2_lon1": 1
+  },
+  "outputs": {
+    "val_tiles": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2015_ssa_val_v1/val_tiles.txt",
+    "tile_stats_csv": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2015_ssa_val_v1/tile_stats.csv",
+    "tile_stats_gpkg": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2015_ssa_val_v1/tile_stats.gpkg",
+    "selected_val_tiles_gpkg": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2015_ssa_val_v1/selected_val_tiles.gpkg"
+  }
+}

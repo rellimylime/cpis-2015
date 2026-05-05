@@ -1,0 +1,56 @@
+{
+  "imagery_dir": "/home/ermiller/global_cpis_codes/imgs_cache_raw",
+  "stable_pivots": "/home/ermiller/global_cpis_codes/Africa_CPIS-shp/Africa_CPIS_2021.shp",
+  "change_zones": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/anchor_truth/overlays/change_zones.gpkg",
+  "out_root": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2021_repro_val_v1",
+  "raw_tile_count": 856,
+  "positive_tile_count": 48,
+  "target_val_tiles": 10,
+  "selected_val_tiles": 10,
+  "val_fraction": 0.2,
+  "min_val_tiles": 8,
+  "max_val_tiles": 0,
+  "min_centroid_distance_km": 250.0,
+  "lon_bins": 4,
+  "lat_bins": 3,
+  "score_formula": {
+    "stable_count_log1p_norm": 0.45,
+    "change_count_log1p_norm": 0.35,
+    "boundary_touch_count_log1p_norm": 0.2
+  },
+  "selected_tiles": [
+    "africa_s2_2021_tile_0025",
+    "africa_s2_2021_tile_0744",
+    "africa_s2_2021_tile_0780",
+    "africa_s2_2021_tile_0785",
+    "africa_s2_2021_tile_0816",
+    "africa_s2_2021_tile_0819",
+    "africa_s2_2021_tile_0823",
+    "africa_s2_2021_tile_0855",
+    "africa_s2_2021_tile_0859",
+    "africa_s2_2021_tile_0891"
+  ],
+  "selected_tier_counts": {
+    "high": 6,
+    "medium": 3,
+    "low": 1
+  },
+  "selected_region_counts": {
+    "lat0_lon1": 1,
+    "lat1_lon3": 1,
+    "lat1_lon2": 1,
+    "lat0_lon3": 1,
+    "lat0_lon2": 1,
+    "lat1_lon1": 1,
+    "lat2_lon2": 1,
+    "lat2_lon3": 1,
+    "lat2_lon0": 1,
+    "lat2_lon1": 1
+  },
+  "outputs": {
+    "val_tiles": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2021_repro_val_v1/val_tiles.txt",
+    "tile_stats_csv": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2021_repro_val_v1/tile_stats.csv",
+    "tile_stats_gpkg": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2021_repro_val_v1/tile_stats.gpkg",
+    "selected_val_tiles_gpkg": "/home/ermiller/global_cpis_codes/runs/new_method/rse2023_2015_v1/splits/2021_repro_val_v1/selected_val_tiles.gpkg"
+  }
+}

@@ -1,11 +1,14 @@
-# Data (downloaded via setup script)
+# Data (downloaded via setup script — large or external)
 data/anchors/
-data/regions/
+data/anchors_prepared/
 data/imagery/
 data/gold/
+# Note: data/regions/ is intentionally tracked (small reference geometry, ~3 MB,
+# defines the export AOI; needed for reproducible GEE exports).
 
 # Runtime artifacts
 runs/
+outputs/
 *.log
 *.err
 
@@ -22,6 +25,7 @@ build/
 
 # Editor / assistant state
 .claude/
+.codex
 .codex/
 .vscode/
 INFO
