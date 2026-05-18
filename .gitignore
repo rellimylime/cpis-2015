@@ -29,3 +29,6 @@ build/
 .codex/
 .vscode/
 INFO
+
+# Ignore PROJECT_HANDOFF.md
+PROJECT_HANDOFF.md
